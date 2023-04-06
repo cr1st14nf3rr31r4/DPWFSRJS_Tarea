@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contacto Cristian Ferreira</title>
+    <link href="https://fonts.googleapis.com/css2?family=Abel&family=Caveat&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="estilos.css">
+    <style>
+        form {
+            padding-top: 20px;
+            width: 100%;
+            max-width: 600px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        input {
+            height: 50px;
+            width: 400px;
+            padding-left: 10px;
+            border-radius: 10px;
+            border: 1px white solid;
+            font-family: 'dungeon';
+            font-size: 15px;
+            color: white;
+            background: black;
+        }
+
+        textarea {
+            height: 200px;
+            width: 400px;
+            padding-left: 10px;
+            border-radius: 10px;
+            border: 1px white solid;
+            font-family: 'dungeon';
+            font-size: 15px;
+            color: white;
+            background: black;
+        }
+
+        .botones {
+            width: 200px;
+            padding: 0;
+        }
+
+        .botones:hover {
+            /* background-color: grey; */
+            background: radial-gradient(circle, rgba(255, 255, 255, 1) 0%, rgba(140, 140, 140, 1) 100%);
+            color: black;
+        }
+
+        #volver {
+            width: 100px;
+            color: black;
+            text-align: center;
+            border-radius: 10px 10px 10px 10px;
+            /* background-color: red; */
+            background: radial-gradient(circle, rgba(255, 255, 255, 1) 0%, rgba(140, 140, 140, 1) 100%);
+            padding: 10px;
+            box-shadow: -5px 5px 5px 1px rgba(255, 255, 255, .2);
+        }
+
+        #volver:hover {
+            box-shadow: 5px -5px 5px 1px rgba(255, 255, 255, .2);
+        }
+    </style>
+</head>
+
+<body>
+    <header class="portada">
+        <div class="titulo">
+            <h1>Cristian Ferreira | Contacto</h1>
+        </div>
+    </header>
+    <section>
+        <form action="" method="">
+            <p>
+                <input type="text" name="nombre" placeholder="Nombre">
+            </p>
+            <p>
+                <input type="text" name="apellido" placeholder="Apellido">
+            </p>
+            <p>
+                <input type="text" name="email" placeholder="E-mail">
+            </p>
+            <p>
+                <textarea name="mensaje" placeholder="Mensaje"></textarea>
+            </p>
+            <p>
+                <input class="botones" type="submit" value="Enviar">
+                <input class="botones" type="reset" value="Borrar">
+            </p>
+        </form>
+        <br>
+        <br>
+        <div id="volver">
+            <h3><a class="link" href="cv.html">Volver</a></h3>
+        </div>
+        <br>
+    </section>
+</body>
+
+</html>
