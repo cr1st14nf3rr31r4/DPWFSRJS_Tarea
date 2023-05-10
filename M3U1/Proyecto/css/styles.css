@@ -1,0 +1,213 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Play', sans-serif;
+    font-size: 1rem;
+    line-height: 1.25rem;
+}
+
+.nav_bar {
+    background-color: rgba(0, 0, 0, .7);
+    box-shadow: 1px 1px 4px 0 rgba(0, 0, 0, .1);
+    width: 100%;
+    height: 72px;
+    position: fixed;
+    overflow: hidden;
+    z-index: 99;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.nav_bar .menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+}
+
+.nav_bar .menu li a {
+    display: block;
+    color: #C0C0C0;
+    padding: 0px 20px;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: all .5s ease;
+}
+
+.nav_bar .menu li a:hover {
+    color: #fff;
+}
+
+.nav_bar .menu li a:active {
+    color: #fff
+}
+
+.nav_bar .menu li a.activo {
+    color: #fff
+}
+
+/* social media */
+
+.media_icons a {
+    color: #C0C0C0;
+    padding: 10px;
+    max-width: 50px;
+    font-size: 1.2rem;
+    text-align: center;
+    text-decoration: none;
+}
+
+.media_icons a i {
+    font-size: 1.25rem;
+    background-color: #C0C0C0;
+    width: 30px;
+    line-height: 30px;
+    color: #000;
+    border-radius: 50%;
+    transition: all .5s ease;
+}
+
+.media_icons i:hover {
+    background-color: #fff;
+}
+
+/* menu icon */
+
+.nav_bar .menu-icon {
+    cursor: pointer;
+    padding: 28px 20px;
+    position: relative;
+    user-select: none;
+}
+
+.nav_bar .menu-icon .nav-icon {
+    background: #fff;
+    display: block;
+    height: 3px;
+    position: relative;
+    transition: background .2s ease-out;
+    width: 20px;
+}
+
+.nav_bar .menu-icon .nav-icon:before,
+.nav_bar .menu-icon .nav-icon:after {
+    background: #fff;
+    content: '';
+    display: block;
+    height: 100%;
+    position: absolute;
+    transition: all .2s ease-out;
+    width: 100%;
+}
+
+.nav_bar .menu-icon .nav-icon:before {
+    top: 8px;
+}
+
+.nav_bar .menu-icon .nav-icon:after {
+    top: -8px;
+}
+
+/* menu btn */
+
+.nav_bar .menu-btn {
+    display: none;
+}
+
+nav .menu-btn:checked~.menu-icon .nav-icon {
+    background: transparent;
+}
+
+.nav_bar .menu-btn:checked~.menu-icon .nav-icon:before {
+    transform: rotate(-45deg);
+    top: 0;
+}
+
+.nav_bar .menu-btn:checked~.menu-icon .nav-icon:after {
+    transform: rotate(45deg);
+    top: 0;
+}
+
+
+.nav_bar .menu-icon {
+    display: none;
+}
+
+/* fin navbar */
+
+/* inicio main */
+
+.hero {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    background-image: url(../img/cristianferreira.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.hero h1 {
+    font-family: 'Dungeon', sans-serif;
+    font-size: 3.5rem;
+    font-weight: normal;
+    text-shadow: rgba(0, 0, 0, 0.8) 0px 4px 5px;
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+.hero h2 {
+    color: #fff;
+    font-weight: lighter;
+    font-size: 1.4rem;
+    text-shadow: rgba(0, 0, 0, 0.8) 0px 4px 5px;
+}
+
+/* media queries */
+
+@media screen and (max-width:800px) {
+
+    .nav_bar .menu-icon {
+        display: block;
+    }
+
+    .nav_bar .menu {
+        position: fixed;
+        top: 72px;
+        right: -100%;
+        display: block;
+        text-align: center;
+        width: 100%;
+        height: 100vh;
+        line-height: 70px;
+        background-color: rgba(0, 0, 0, .7);
+        box-shadow: 1px 1px 4px 0 rgba(0, 0, 0, .1);
+        transition: all .5s ease-in-out;
+    }
+
+    .nav_bar .menu-btn:checked~.menu {
+        right: 0px;
+    }
+
+    .hero{
+        background-position: -95px;
+    }
+
+    .hero h1 {
+        font-size: 3rem;
+    }
+
+}
