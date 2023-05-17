@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        const num1 = parseInt(prompt('Ingrese el primer número:', ''));
+        const num2 = parseInt(prompt('Ingrese el segundo número:', ''));
+        const num3 = parseInt(prompt('Ingrese el tercer número:', ''));
+        const num4 = parseInt(prompt('Ingrese el cuarto número:', ''));
+
+        var array = [num1, num2, num3, num4];
+        var mayor = 0;
+
+        for (i = 0; i < array.length; i++) {
+            if (array[i] > mayor) {
+                mayor = array[i];
+            }
+        }
+
+        document.write(`El mayor es: ${mayor}`);
+    </script>
+</body>
+
+</html>
