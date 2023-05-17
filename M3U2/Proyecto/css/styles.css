@@ -1,0 +1,358 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-margin-top: 72px;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Play', sans-serif;
+    font-size: 1rem;
+    line-height: 1.25rem;
+    background-color: #000;
+    width: 100%;
+    height: 100vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.nav_bar {
+    background-color: rgba(0, 0, 0, .7);
+    box-shadow: 1px 1px 4px 0 rgba(0, 0, 0, .1);
+    width: 100%;
+    height: 72px;
+    position: fixed;
+    overflow: hidden;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.nav_bar .menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+}
+
+.nav_bar .menu li a {
+    display: block;
+    color: #fff;
+    padding: 0px 15px;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: all .5s ease;
+}
+
+.nav_bar .menu li a:hover {
+    color: #1cbaa4;
+}
+
+
+.nav_bar .menu li a.activo {
+    color: #1cbaa4;
+}
+
+/* social media */
+
+.media_icons a {
+    color: #C0C0C0;
+    padding: 6px;
+    max-width: 50px;
+    font-size: 1.2rem;
+    text-align: center;
+    text-decoration: none;
+}
+
+.media_icons a i {
+    font-size: 1.25rem;
+    background-color: #fff;
+    width: 30px;
+    line-height: 30px;
+    color: #000;
+    border-radius: 50%;
+    transition: all .5s ease;
+}
+
+.media_icons i:hover {
+    background-color: #1cbaa4;
+    color: #fff;
+}
+
+/* menu icon */
+
+.nav_bar .menu-icon {
+    cursor: pointer;
+    padding: 28px 20px;
+    position: relative;
+    user-select: none;
+}
+
+.nav_bar .menu-icon .nav-icon {
+    background: #fff;
+    display: block;
+    height: 3px;
+    position: relative;
+    transition: background .2s ease-out;
+    width: 20px;
+}
+
+.nav_bar .menu-icon .nav-icon:before,
+.nav_bar .menu-icon .nav-icon:after {
+    background: #fff;
+    content: '';
+    display: block;
+    height: 100%;
+    position: absolute;
+    transition: all .2s ease-out;
+    width: 100%;
+}
+
+.nav_bar .menu-icon .nav-icon:before {
+    top: 8px;
+}
+
+.nav_bar .menu-icon .nav-icon:after {
+    top: -8px;
+}
+
+/* menu btn */
+
+.nav_bar .menu-btn {
+    display: none;
+}
+
+nav .menu-btn:checked~.menu-icon .nav-icon {
+    background: transparent;
+}
+
+.nav_bar .menu-btn:checked~.menu-icon .nav-icon:before {
+    transform: rotate(-45deg);
+    top: 0;
+}
+
+.nav_bar .menu-btn:checked~.menu-icon .nav-icon:after {
+    transform: rotate(45deg);
+    top: 0;
+}
+
+
+.nav_bar .menu-icon {
+    display: none;
+}
+
+/* fin navbar */
+
+/* inicio main */
+
+.hero {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    background-image: url(../img/cristianferreira.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-attachment: fixed;
+}
+
+.hero h1 {
+    font-family: 'Goldman', cursive;
+    font-size: 3.5rem;
+    font-weight: normal;
+    text-shadow: rgba(0, 0, 0, 0.8) 0px 4px 5px;
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+.hero h3 {
+    color: #fff;
+    font-weight: lighter;
+    font-size: 1.4rem;
+    text-shadow: rgba(0, 0, 0, 0.8) 0px 4px 5px;
+}
+
+
+/* bio */
+
+.cv {
+    width: 75%;
+    margin: 0 auto;
+    height: 100%;
+    position: relative;
+    background-color: #000;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+.cv .foto {
+    width: 26%;
+    position: relative;
+}
+
+.cv .foto img {
+    width: 100%;
+    border-radius: 10px 0px;
+}
+
+.cv .texto {
+    width: 74%;
+    padding-left: 20px;
+}
+
+.st {
+    font-size: 2.2rem;
+    font-family: 'Goldman', cursive;
+    color: #fff;
+    margin-bottom: 18px;
+}
+
+.cv .texto p {
+    text-align: justify;
+    margin-bottom: 6px;
+}
+
+.cv .texto p span {
+    font-weight: bold;
+}
+
+.cv .texto input[type="submit"] {
+    position: relative;
+    border: none;
+    padding: 10px 15px;
+    margin-top: 15px;
+    float: right;
+    border-radius: 30px;
+    background-color: #fff;
+    box-shadow: 1px 1px 4px 0 rgba(0, 0, 0, .8);
+    color: #000;
+    transition: all .2s ease;
+}
+
+.cv input[type="submit"]:hover {
+    background-color: #1cbaa4;
+    color: #fff;
+}
+
+/* separador 1 */
+
+.separador_1 {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    background-image: url(../img/separador01.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+#videos {
+    width: 75%;
+    margin: 0 auto;
+    padding: 30px;
+    height: 100vh;
+    position: relative;
+    background-color: #000;
+    color: #fff;
+}
+
+.vgalery {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    padding-bottom: 30px;
+}
+
+.vgalery>* {
+    flex: 0 0 33%;
+}
+
+.titulo {
+    position: relative;
+    text-align: center;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+
+
+
+
+
+
+/* media queries */
+
+@media screen and (max-width:800px) {
+
+    .nav_bar .menu-icon {
+        display: block;
+    }
+
+    .nav_bar .menu {
+        position: fixed;
+        top: 72px;
+        right: -100%;
+        display: block;
+        text-align: center;
+        width: 100%;
+        height: calc(100vh - 72px);
+        line-height: 56px;
+        background-color: rgba(0, 0, 0, .7);
+        box-shadow: 1px 1px 4px 0 rgba(0, 0, 0, .1);
+        transition: all .5s ease-in-out;
+    }
+
+    .nav_bar .menu-btn:checked~.menu {
+        right: 0px;
+    }
+
+    .hero {
+        background-position-x: left;
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+        margin-bottom: 10px;
+    }
+
+    
+    .hero h3 {
+        font-size: 1rem;
+    }
+
+    .cv {
+        width: 80%;
+        margin: 0 auto;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap-reverse;
+    }
+
+    .cv .texto {
+        width: 100%;
+        padding-left: 0px;
+
+    }
+
+    .cv .foto {
+        width: 100%;
+        margin-top: 30px;
+    }
+
+    .separador_1 {
+        background-position-x: center;
+    }
+
+
+}
