@@ -1,0 +1,880 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Play', sans-serif;
+}
+
+body {
+    font-size: 1rem;
+    line-height: 1.25rem;
+    background-color: #000;
+    color: #fff;
+    width: 100%;
+    height: 100vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.nav_bar {
+    background-color: rgba(0, 0, 0, .7);
+    box-shadow: 1px 1px 4px 0 rgba(0, 0, 0, .1);
+    width: 100%;
+    height: 72px;
+    position: fixed;
+    overflow: hidden;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.nav_bar .menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+}
+
+.nav_bar .menu li a {
+    display: block;
+    color: #fff;
+    padding: 0px 15px;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: all .5s ease;
+}
+
+.nav_bar .menu li a:hover {
+    color: #1cbaa4;
+}
+
+
+.nav_bar .menu li a.activo {
+    color: #1cbaa4;
+}
+
+/* social media */
+
+.media_icons a {
+    padding: 6px;
+    max-width: 30px;
+    text-align: center;
+    text-decoration: none;
+    overflow: hidden;
+}
+
+.media_icons a i {
+    font-size: 1.25rem;
+    background-color: #fff;
+    width: 30px;
+    line-height: 30px;
+    color: #000;
+    border-radius: 50%;
+    transition: all .5s ease;
+    overflow: hidden;
+}
+
+.media_icons i:hover {
+    background-color: #1cbaa4;
+    color: #fff;
+}
+
+/* menu icon */
+
+.nav_bar .menu-icon {
+    cursor: pointer;
+    padding: 28px 20px;
+    position: relative;
+    user-select: none;
+}
+
+.nav_bar .menu-icon .nav-icon {
+    background: #fff;
+    display: block;
+    height: 3px;
+    position: relative;
+    transition: background .2s ease-out;
+    width: 20px;
+}
+
+.nav_bar .menu-icon .nav-icon:before,
+.nav_bar .menu-icon .nav-icon:after {
+    background: #fff;
+    content: '';
+    display: block;
+    height: 100%;
+    position: absolute;
+    transition: all .2s ease-out;
+    width: 100%;
+}
+
+.nav_bar .menu-icon .nav-icon:before {
+    top: 8px;
+}
+
+.nav_bar .menu-icon .nav-icon:after {
+    top: -8px;
+}
+
+/* menu btn */
+
+.nav_bar .menu-btn {
+    display: none;
+}
+
+nav .menu-btn:checked~.menu-icon .nav-icon {
+    background: transparent;
+}
+
+.nav_bar .menu-btn:checked~.menu-icon .nav-icon:before {
+    transform: rotate(-45deg);
+    top: 0;
+}
+
+.nav_bar .menu-btn:checked~.menu-icon .nav-icon:after {
+    transform: rotate(45deg);
+    top: 0;
+}
+
+
+.nav_bar .menu-icon {
+    display: none;
+}
+
+/* fin navbar */
+
+/* inicio main */
+
+section {
+    padding: 0px 12.5% 0px;
+}
+
+.bio,
+.videos,
+.discos,
+.conciertos,
+.galeria,
+.contacto {
+    padding-top: 40px;
+    padding-bottom: 80px;
+}
+
+.inicio {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.inicio .portada {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    background-image: url(../img/cristianferreira.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: -1;
+}
+
+.inicio h1 {
+    font-family: 'Play', sans-serif;
+    font-size: 4rem;
+    font-weight: 700;
+    text-shadow: rgba(0, 0, 0, 0.8) 0px 4px 5px;
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+.inicio h3 {
+    font-family: 'Play', sans-serif;
+    color: #fff;
+    font-weight: lighter;
+    font-size: 1.4rem;
+    text-shadow: rgba(0, 0, 0, 0.8) 0px 4px 5px;
+}
+
+
+/* bio */
+
+.bio {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    background-color: #000;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.st {
+    font-size: 2.5rem;
+    font-family: 'Play', sans-serif;
+    color: #fff;
+    width: 100%;
+    margin-bottom: 50px;
+    position: relative;
+    text-align: center;
+}
+
+.foto_bio {
+    position: relative;
+    width: 20rem;
+    height: 20rem;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.foto_bio img {
+    width: 90%;
+    border-radius: 50%;
+    border: .2rem solid #fff;
+}
+
+.foto_bio .rueda {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(0);
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    border-top: .2rem solid #000;
+    border-bottom: .2rem solid #000;
+    border-right: .2rem solid #fff;
+    border-left: .2rem solid #fff;
+    animation: bioRueda 8s linear infinite;
+}
+
+.bio .texto_bio {
+    text-align: center;
+}
+
+
+.bio .texto_bio p {
+    margin-bottom: 15px;
+}
+
+.bio .texto_bio p span {
+    font-weight: bold;
+}
+
+.bio a {
+    position: relative;
+    border: none;
+    text-decoration: none;
+    font-size: 1.1rem;
+    padding: 15px 20px;
+    margin-bottom: 30px;
+    border-radius: 30px;
+    background-color: #fff;
+    box-shadow: 1px 1px 4px 0 rgba(0, 0, 0, .8);
+    color: #000;
+    transition: all .2s ease;
+}
+
+.bio a:hover {
+    background-color: #1cbaa4;
+    color: #fff;
+    transform: scale(.9);
+    cursor: pointer;
+}
+
+/* videos */
+
+.videos {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    background-color: #000;
+    color: #fff;
+}
+
+.vgalery {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.vgalery>* {
+    flex: 0 0 30%;
+}
+
+.video {
+    padding-bottom: 10px;
+}
+
+.video:hover {
+    transform: scale(1.05);
+    transition: all .6s ease;
+}
+
+/* discos */
+
+.discos {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    background-color: #000;
+    color: #fff;
+}
+
+.discografia {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.discografia>* {
+    flex: 0 0 26%;
+}
+
+.disco {
+    padding: 20px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.disco:hover {
+    background-color: rgba(32, 32, 32, 0.7);
+    border-radius: 10px;
+    cursor: pointer;
+    transform: scale(1.05);
+    transition: all 1.5s ease;
+}
+
+.disco img {
+    width: 233px;
+    height: 233px;
+    position: relative;
+    object-fit: fill;
+    pointer-events: none;
+}
+
+.disco .cabecera_disco {
+    width: 233px;
+    position: relative;
+    padding-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.disco h3 {
+    font-size: 1rem;
+    font-weight: lighter;
+}
+
+.disco .cabecera_disco .escuchar a {
+    max-width: 28px;
+    padding-left: 5px;
+    text-align: center;
+    text-decoration: none;
+    overflow: hidden;
+}
+
+.disco .cabecera_disco .escuchar a i {
+    font-size: 1.35rem;
+    background-color: #fff;
+    width: 28px;
+    line-height: 28px;
+    color: #000;
+    border-radius: 50%;
+    transition: all .5s ease;
+}
+
+.disco .cabecera_disco .escuchar a i:hover {
+    background-color: #1cbaa4;
+    color: #fff;
+}
+
+.disco .pie_disco {
+    width: 233px;
+    padding-top: 10px;
+    position: relative;
+    text-align: center;
+}
+
+/* conciertos */
+
+.conciertos {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    background-color: #000;
+    color: #fff;
+}
+
+.conciertos h2 {
+    margin-bottom: 60px;
+}
+
+.concierto {
+    width: 100%;
+    height: 70px;
+    margin-bottom: 30px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    border-radius: 50px;
+    transition: all 1s ease;
+}
+
+.concierto:hover {
+    background-color: rgba(32, 32, 32, 0.7);
+}
+
+.fecha {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 18%;
+    height: 60px;
+}
+
+.fecha .hora {
+    width: 100%;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.fecha .hora .texto_hora {
+    font-size: 1rem;
+    transform: scaleX(1.4);
+}
+
+.fecha .dia {
+    width: 100%;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.fecha .dia .texto_dia {
+    font-size: 1.4rem;
+    transform: scaleY(1.8);
+}
+
+.grupo {
+    position: relative;
+    width: 32%;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.grupo .nombre_grupo {
+    font-size: 1rem;
+    font-weight: Bold;
+    word-wrap: normal;
+}
+
+.lugar {
+    position: relative;
+    width: 52%;
+    height: 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.lugar .nombre_lugar {
+    font-size: 1rem;
+    font-weight: normal;
+    word-wrap: normal;
+}
+
+.lugar .direccion_lugar {
+    font-size: 0.8rem;
+    font-weight: normal;
+    word-wrap: normal;
+}
+
+.tickets {
+    position: relative;
+    width: 150px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+    border-radius: 50px;
+    transition: all .5s ease;
+}
+
+.tickets a {
+    width: 100%;
+    padding: 10px 0;
+    text-align: center;
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.tickets:hover {
+    background-color: #1cbaa4;
+    transform: scale(.9);
+}
+
+
+.tickets a:hover {
+    color: #fff;
+}
+
+
+/* galeria */
+
+.galeria {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    background-color: #000;
+    color: #fff;
+}
+
+.carrusel-items {
+    display: flex;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    padding: 20px 0px;
+    filter: grayscale(100%);
+}
+
+.carrusel-item {
+    min-width: auto;
+    max-width: auto;
+    height: 380px;
+    cursor: pointer;
+}
+
+.carrusel-item img {
+    width: auto;
+    height: 100%;
+    object-fit: cover;
+}
+
+.carrusel-item:hover {
+    transform: scale(1.1);
+    border: 1px solid #000;
+}
+
+/* contacto */
+
+.contacto {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    background-color: #000;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.contacto_texto {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    line-height: 2.5rem;
+    padding-top: 5px;
+    padding-bottom: 20px;
+}
+
+.contacto_texto h4 {
+    font-size: 1.1rem;
+    font-weight: normal;
+}
+
+.contacto_texto h3 {
+    font-size: 1.6rem;
+    font-weight: bold;
+}
+
+.wapp {
+    display: flex;
+    justify-content: center;
+}
+
+.wapp h4 {
+    font-size: 1rem;
+}
+
+.wapp a i {
+    font-size: 1.6rem;
+    text-align: center;
+    width: 40px;
+    line-height: 40px;
+    color: #fff;
+    transition: all .5s ease;
+}
+
+
+.wapp a i:hover {
+    color: #1cbaa4;
+}
+
+.contacto_texto .email {
+    font-size: 1.05rem;
+    margin-bottom: 10px;
+    text-decoration: none;
+    color: #fff;
+}
+
+.contacto_texto .email:hover {
+    color: #1cbaa4;
+}
+
+.contacto form {
+    width: 50%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.contacto form .contacto_form {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.contacto form .contacto_form .campo {
+    position: relative;
+    width: 100%;
+    margin-bottom: .5rem;
+}
+
+.contacto form .contacto_form .campo input,
+.contacto form .contacto_form .campo textarea {
+    width: 100%;
+    height: 100%;
+    padding: 1rem;
+    font-size: 1.1rem;
+    background-color: #000;
+    color: #fff;
+    outline: none;
+    border-radius: 8px;
+    border: 1px solid #323232;
+}
+
+.contacto form .text_area {
+    position: relative;
+    display: flex;
+}
+
+.contacto form .text_area textarea {
+    resize: none;
+}
+
+.contacto form .enviar {
+    position: relative;
+    top: -35px;
+}
+
+.contacto form .enviar button {
+    border: none;
+    font-size: 1.1rem;
+    padding: 15px 25px;
+    border-radius: 30px;
+    background-color: #fff;
+    box-shadow: 1px 1px 4px 0 rgba(0, 0, 0, .8);
+    color: #000;
+    transition: all .2s ease;
+}
+
+.contacto form .enviar button:hover {
+    background-color: #1cbaa4;
+    color: #fff;
+    cursor: pointer;
+    transform: scale(.9);
+}
+
+/* footer */
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 1rem 9%;
+    background-color: #000;
+    color: #606060;
+}
+
+.footer_texto,
+.footer_itop {
+    position: relative;
+}
+
+.footer_texto {
+    font-size: 1rem;
+}
+
+
+.footer_itop a {
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: 6px;
+    text-decoration: none;
+}
+
+.footer_itop a i {
+    font-size: 1.25rem;
+    text-align: center;
+    background-color: #fff;
+    width: 30px;
+    line-height: 30px;
+    color: #000;
+    border-radius: 50%;
+    transition: all .5s ease;
+    overflow: hidden;
+}
+
+.footer_itop a i:hover {
+    background-color: #1cbaa4;
+    color: #fff;
+}
+
+
+/* media queries */
+
+@media screen and (max-width:800px) {
+
+    .nav_bar .menu-icon {
+        display: block;
+    }
+
+    .nav_bar .menu {
+        position: fixed;
+        top: 72px;
+        right: -100%;
+        display: block;
+        text-align: center;
+        width: 100%;
+        height: calc(100vh - 72px);
+        line-height: 56px;
+        background-color: rgba(0, 0, 0, .7);
+        box-shadow: 1px 1px 4px 0 rgba(0, 0, 0, .1);
+        transition: all .5s ease-in-out;
+    }
+
+    .nav_bar .menu-btn:checked~.menu.active{
+        right: 0px;
+    }
+
+    .inicio h1 {
+        font-size: 2rem;
+        margin-bottom: 10px;
+    }
+
+    .inicio h3 {
+        font-size: 1.1rem;
+    }
+
+    .st {
+        font-size: 2rem;
+        margin-bottom: 20px;
+    }
+
+    .bio {
+        width: 100%;
+        height: 100%;
+        gap: 1rem;
+    }
+
+    .foto_bio img {
+        width: 70%;
+    }
+
+    .foto_bio .rueda {
+        width: 80%;
+        height: 80%;
+    }
+
+    .videos h2 {
+        padding-bottom: 20px;
+    }
+
+    .disco {
+        padding: 20px 15px;
+    }
+
+    .discos h2 {
+        padding-bottom: 20px;
+    }
+
+    .concierto {
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .fecha {
+        width: 100%;
+        margin-bottom: 5px;
+    }
+
+    .grupo {
+        width: 100%;
+        margin-bottom: 5px;
+    }
+
+    .lugar {
+        width: 100%;
+        margin-bottom: 5px;
+    }
+
+    .contacto form {
+        width: 90%;
+    }
+
+    .footer {
+        padding: 1rem 4%;
+        flex-direction: column-reverse;
+    }
+
+    .footer p {
+        margin-top: 1rem;
+        text-align: center;
+        font-size: 0.7rem;
+    }
+
+
+}
+
+/* animaciones */
+
+@keyframes bioRueda {
+    100% {
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+}
