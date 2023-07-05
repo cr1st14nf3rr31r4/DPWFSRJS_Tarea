@@ -1,8 +1,8 @@
 import React from 'react';
 
-const CallToAction = (props) => {
+const CallToAction = () => {
     return (
-        <a data-scroll-header href="#contacto">{props.GoTo}</a>    
+        <a data-scroll-header href="#contacto">Contacto</a>    
     );
 }
  

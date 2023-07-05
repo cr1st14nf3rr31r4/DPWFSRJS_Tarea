@@ -303,19 +303,23 @@ section {
     color: #fff;
 }
 
-.vgalery {
+.vgallery {
     display: flex;
     justify-content: space-around;
     align-items: center;
     flex-wrap: wrap;
 }
 
-.vgalery>* {
+.vgallery>* {
     flex: 0 0 30%;
 }
 
 .video {
     padding-bottom: 10px;
+}
+
+.video iframe {
+    border: 0px;
 }
 
 .video:hover {
@@ -406,7 +410,8 @@ section {
 
 .disco .pie_disco {
     width: 233px;
-    padding-top: 10px;
+    height: 40px;
+    margin-top: 10px;
     position: relative;
     text-align: center;
 }
@@ -786,7 +791,7 @@ section {
         transition: all .5s ease-in-out;
     }
 
-    .nav_bar .menu-btn:checked~.menu.active{
+    .nav_bar .menu-btn:checked~.menu.active {
         right: 0px;
     }
 

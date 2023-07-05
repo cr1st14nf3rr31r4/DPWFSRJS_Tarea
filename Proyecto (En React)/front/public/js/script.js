@@ -28,6 +28,15 @@ const scrollArrowUp = new SmoothScroll('.footer_itop a[href*="#"]', {
 
   let sections = document.querySelectorAll('section');
   let navLinks = document.querySelectorAll('.nav_bar .menu li a');
+  let currentURL = window.location.href;
+  let inicio = document.querySelector('.nav_bar .menu li a[href*="#inicio"]');
+
+  navLinks.forEach((link) => {
+    if (link.href === currentURL && currentURL != inicio) {
+      link.classList.add("activo");
+      inicio.classList.remove('activo');
+    } 
+  });
 
   window.onscroll = () => {
     sections.forEach(sec => {
@@ -45,8 +54,6 @@ const scrollArrowUp = new SmoothScroll('.footer_itop a[href*="#"]', {
     });
     menuIcon.checked = false;
     navbar.classList.remove('active');
-    
-
   }
 
 
@@ -59,40 +66,40 @@ const scrollArrowUp = new SmoothScroll('.footer_itop a[href*="#"]', {
     portada.style.top = 0.5 * scrollY + 'px';
 
   });
+
+
+// galeria
+
+const carrusel = document.querySelector(".carrusel-items");
+
+let maxScrollLeft = carrusel.scrollWidth - carrusel.clientWidth;
+let intervalo = null;
+let step = 1;
+const start = () => {
+  intervalo = setInterval(function () {
+    carrusel.scrollLeft = carrusel.scrollLeft + step;
+    if (carrusel.scrollLeft === maxScrollLeft) {
+      step = step * -1;
+    } else if (carrusel.scrollLeft === 0) {
+      step = step * -1;
+    }
+  }, 15);
+};
+
+const stop = () => {
+  clearInterval(intervalo);
+};
+
+carrusel.addEventListener("mouseover", () => {
+  stop();
+});
+
+carrusel.addEventListener("mouseout", () => {
+  start();
+});
+
+start();
+
 }
-
-// // galeria
-
-// const carrusel = document.querySelector(".carrusel-items");
-
-// let maxScrollLeft = carrusel.scrollWidth - carrusel.clientWidth;
-// let intervalo = null;
-// let step = 1;
-// const start = () => {
-//   intervalo = setInterval(function () {
-//     carrusel.scrollLeft = carrusel.scrollLeft + step;
-//     if (carrusel.scrollLeft === maxScrollLeft) {
-//       step = step * -1;
-//     } else if (carrusel.scrollLeft === 0) {
-//       step = step * -1;
-//     }
-//   }, 15);
-// };
-
-// const stop = () => {
-//   clearInterval(intervalo);
-// };
-
-// carrusel.addEventListener("mouseover", () => {
-//   stop();
-// });
-
-// carrusel.addEventListener("mouseout", () => {
-//   start();
-// });
-
-// start();
-
-
 
 
