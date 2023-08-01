@@ -1,0 +1,38 @@
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="container_nuevo">
+            <h4>Nuevo Concierto</h4>
+            <form action="/admin/conciertos/nuevo" method="post">
+                <div class="row justify-content-center">
+                    <div class="campo_nuevo" style="width: 50%;">
+                        <input type="text" placeholder="Dia [dd/mm]" name="dia">
+                    </div>
+
+                    <div class="campo_nuevo" style="width: 50%;">
+                        <input type="text" placeholder="Hora [hh:mm]" name="hora">
+                    </div>
+                </div>
+
+                <div class="campo_nuevo">
+                    <input type="text" placeholder="Grupo" name="grupo">
+                </div>
+
+                <div class="campo_nuevo">
+                    <input type="text" placeholder="Lugar" name="lugar">
+                </div>
+
+                <div class="campo_nuevo">
+                    <input type="text" placeholder="Direccion" name="direccion">
+                </div>
+
+                <div class="campo_nuevo">
+                    <input type="text" placeholder="Tickets" name="tickets">
+                </div>
+                <button type="submit">Guardar</button>
+            </form>
+            {{#if error}}
+            <p class="incorrecto">{{message}}</p>
+            {{/if}}
+        </div>
+    </div>
+</div>

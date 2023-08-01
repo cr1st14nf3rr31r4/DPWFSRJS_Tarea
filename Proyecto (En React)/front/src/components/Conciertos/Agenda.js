@@ -10,7 +10,7 @@ const Agenda = () => {
                 grupo="Ferreira / Besasso"
                 lugar="Centro Cultural Ricardo Rojas"
                 direccion="Av. Corrientes 2038. (CABA)"
-                ticketsLink="#"
+                tickets="#"
             />
 
             <Concierto
@@ -19,7 +19,7 @@ const Agenda = () => {
                 grupo="Ferreira / Besasso"
                 lugar="Centro Cultural Ricardo Rojas"
                 direccion="Av. Corrientes 2038. (CABA)"
-                ticketsLink="#"
+                tickets="#"
             />
 
             <Concierto
@@ -28,7 +28,7 @@ const Agenda = () => {
                 grupo="Ferreira / Besasso"
                 lugar="Centro Cultural Ricardo Rojas"
                 direccion="Av. Corrientes 2038. (CABA)"
-                ticketsLink="#"
+                tickets="#"
             />
         </>
     );

@@ -1,17 +1,19 @@
 <div class="container">
-    <div class="containerlogin">
-        <form action="/admin/login" method="post">
-            <div class="campo">
-                <input type="text" id="inputUser" placeholder="Usuario" name="usuario">
-            </div>
+    <div class="row justify-content-center">
+        <div class="container_login">
+            <form action="/admin/login" method="post">
+                <div class="campo_login">
+                    <input type="text" id="inputUser" placeholder="Usuario" name="usuario">
+                </div>
 
-            <div class="campo">
-                <input type="password" id="inputPassword" placeholder="Contraseña" name="password">
-            </div>
-            <button type="submit">Ingresar</button>
-        </form>
-        {{#if error}}
-        <p class="incorrecto">Usuario y/o Contraseña incorrectos</p>
-        {{/if}}
+                <div class="campo_login">
+                    <input type="password" id="inputPassword" placeholder="Contraseña" name="password">
+                </div>
+                <button type="submit">Ingresar</button>
+            </form>
+            {{#if error}}
+            <p class="incorrecto">Usuario y/o Contraseña incorrectos</p>
+            {{/if}}
+        </div>
     </div>
 </div>

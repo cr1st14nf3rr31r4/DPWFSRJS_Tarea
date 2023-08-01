@@ -1,0 +1,45 @@
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="container_modificar">
+            <h4>Modificar Concierto</h4>
+            <form action="/admin/conciertos/modificar" method="post">
+            <input type="hidden" value="{{concierto.id}}" name="id">
+                <div class="row justify-content-center">
+                    <div class="campo_nuevo" style="width: 50%; text-align: left; color:gray;">
+                        <label style="padding-left: .6rem;" for="">Dia [dd/mm]</label>
+                        <input type="text" name="dia" value="{{concierto.dia}}">
+                    </div>
+
+                    <div class="campo_nuevo" style="width: 50%; text-align: left; color:gray;">
+                        <label style="padding-left: .6rem;" for="">Hora [hh:mm]</label>
+                        <input type="text" name="hora" value="{{concierto.hora}}">
+                    </div>
+                </div>
+
+                <div class="campo_nuevo" style="text-align: left; color:gray">
+                    <label style="padding-left: .6rem;" for="">Grupo</label>
+                    <input type="text" name="grupo" value="{{concierto.grupo}}">
+                </div>
+
+                <div class="campo_nuevo" style="text-align: left; color:gray">
+                    <label style="padding-left: .6rem;" for="">Lugar</label>
+                    <input type="text" name="lugar" value="{{concierto.lugar}}">
+                </div>
+
+                <div class="campo_nuevo" style="text-align: left; color:gray">
+                    <label style="padding-left: .6rem;" for="">Direccion</label>
+                    <input type="text" name="direccion" value="{{concierto.direccion}}">
+                </div>
+
+                <div class="campo_nuevo" style="text-align: left; color:gray">
+                    <label style="padding-left: .6rem;" for="">Tickets</label>
+                    <input type="text" name="tickets" value="{{concierto.tickets}}">
+                </div>
+                <button type="submit">Modificar</button>
+            </form>
+            {{#if error}}
+            <p class="incorrecto">{{message}}</p>
+            {{/if}}
+        </div>
+    </div>
+</div>

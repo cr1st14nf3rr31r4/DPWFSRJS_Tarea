@@ -1,7 +1,7 @@
 import React from 'react';
 
 const Concierto = (props) => {
-    const { dia, hora, grupo, lugar, direccion, ticketsLink } = props;
+    const { dia, hora, grupo, lugar, direccion, tickets } = props;
     return (
         <div className="concierto">
             <div className="fecha">
@@ -20,7 +20,7 @@ const Concierto = (props) => {
                 <h3 className="direccion_lugar">{direccion}</h3>
             </div>
             <div className="tickets">
-                <a href={ticketsLink}>Tickets</a>
+                <a href={tickets}>Tickets</a>
             </div>
         </div>
     );
