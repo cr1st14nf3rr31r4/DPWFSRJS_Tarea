@@ -424,6 +424,11 @@ section {
     position: relative;
     background-color: #000;
     color: #fff;
+    text-align: center;
+}
+
+.conciertos p{
+    font-size: 1.2rem;
 }
 
 .conciertos h2 {

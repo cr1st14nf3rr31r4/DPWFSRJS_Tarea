@@ -44,7 +44,7 @@
                         <td>
                             <a class="btn btn-secondary btn-sm" href="/admin/conciertos/modificar/{{id}}"><i
                                     class="fa fa-pencil" aria-hidden="true"></i></a>
-                            <a class="btn btn-secondary btn-sm" href="/admin/conciertos/eliminar/{{id}}"><i
+                            <a class="btn btn-secondary btn-sm" href="/admin/conciertos/eliminar/{{id}}" onclick="return confirm('¿Está seguro que desea eliminar el concierto #{{id}}?')"><i
                                     class="fa fa-trash" aria-hidden="true"></i></a>
                         </td>
                     </tr>
