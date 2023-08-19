@@ -28,7 +28,10 @@
                 <div class="campo_nuevo">
                     <input type="text" placeholder="Tickets" name="tickets">
                 </div>
-                <button type="submit">Guardar</button>
+                <div class="botones">
+                    <button type="submit">Guardar</button>
+                    <a class="cancelar" href="/admin/conciertos">Cancelar</a>
+                </div>
             </form>
             {{#if error}}
             <p class="incorrecto">{{message}}</p>

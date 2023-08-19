@@ -17,10 +17,14 @@ const Agenda = (props) => {
         cargarConciertos();
     }, []);
 
+    if (loading) {
+        return <p>Cargando...</p>
+    }
+
     return (
         <>
-            {loading ? (
-                <p>Cargando...</p>
+            {conciertos.length == 0 ? (
+                <p>¡Próximamente Calendario de Conciertos!</p>
             ) : (
                 conciertos.map(item =>
                     <Concierto
