@@ -12,8 +12,8 @@ router.get('/conciertos', async function (req, res, next) {
 router.post('/contacto', async (req, res) => {
     const mail = {
         to: 'cristian._.ferreira@hotmail.com',
-        subject: 'Contacto Web',
-        html: `Nombre: ${req.body.nombre}<br>Email: ${req.body.email}<br>Asunto: ${req.body.asunto}<br>Mensaje: ${req.body.mensaje}`
+        subject: `Contacto Web - ${req.body.asunto}`,
+        html: `<strong>Mensaje recibido desde la Web:</strong><br><br><strong>Nombre:</strong> ${req.body.nombre}<br><br><strong>Email:</strong> ${req.body.email}<br><br><strong>Asunto:</strong> ${req.body.asunto}<br><br><strong>Mensaje:</strong> ${req.body.mensaje}`
     }
 
     const transport = nodemailer.createTransport({
